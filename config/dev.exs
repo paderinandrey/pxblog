@@ -42,3 +42,5 @@ config :pxblog, Pxblog.Repo,
   hostname: "localhost",
   template: "template0",
   pool_size: 10
+
+config :bcrypt_elixir, :log_rounds, 4

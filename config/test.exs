@@ -13,7 +13,10 @@ config :logger, level: :warn
 config :pxblog, Pxblog.Repo,
   adapter: Ecto.Adapters.Postgres,
   username: "postgres",
-  password: "postgres",
+  password: "pa$$w0rd",
   database: "pxblog_test",
+  template: "template0",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
+
+config :bcrypt_elixir, :log_rounds, 4
