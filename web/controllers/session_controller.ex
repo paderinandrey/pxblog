@@ -11,7 +11,7 @@ defmodule Pxblog.SessionController do
     render conn, "new.html", changeset: User.changeset(%User{})
   end
 
-  def create(conn, %{"user" => %{"user_params" => username, "password" => password}}) when not is_nil(username) and not is_nil(password) do
+  def create(conn, %{"user" => %{"username" => username, "password" => password}}) when not is_nil(username) and not is_nil(password) do
     user = Repo.get_by(User, username: username)
     sign_in(user, password, conn)
   end
